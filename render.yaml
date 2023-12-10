@@ -1,0 +1,10 @@
+version: 2
+builds:
+  - src: public
+    use: '@now/node'
+routes:
+  - src: /api/.*
+    dest: public/api/index.js
+env:
+  - key: PUPPETEER_EXECUTABLE_PATH
+    value: "/usr/bin/google-chrome"
